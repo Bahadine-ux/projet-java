@@ -1,0 +1,47 @@
+package tn.esprit.test;
+
+import tn.esprit.models.MotifReclamation;
+import tn.esprit.models.Reclamation;
+import tn.esprit.services.ServiceMotifReclamation;
+import tn.esprit.services.ServiceReclamation;
+
+public class Main {
+    public static void main(String[] args) {
+        ServiceMotifReclamation serviceMotif = new ServiceMotifReclamation();
+        ServiceReclamation serviceReclamation = new ServiceReclamation();
+
+        // Ajouter un motif de réclamation
+        MotifReclamation motif = new MotifReclamation(0, "Service Client", "Problème avec le service client", "Service");
+        serviceMotif.add(motif);
+
+        // Ajouter une réclamation
+        Reclamation reclamation = new Reclamation(0, "Problème de connexion", "En attente", motif.getType());
+        serviceReclamation.add(reclamation);
+
+        // Ajouter un autre motif
+        MotifReclamation motif2 = new MotifReclamation(0, "Produit Défectueux", "Produit reçu endommagé", "Produit");
+        serviceMotif.add(motif2);
+
+        // Ajouter une autre réclamation
+        Reclamation reclamation2 = new Reclamation(0, "Produit cassé", "Résolu", motif2.getType());
+        serviceReclamation.add(reclamation2);
+
+        // Afficher toutes les données
+        System.out.println("Motifs de Réclamation : " + serviceMotif.getAll());
+        System.out.println("Réclamations : " + serviceReclamation.getAll());
+
+        // Mettre à jour une réclamation
+        reclamation.setContenu("Problème de connexion résolu");
+        reclamation.setStatus("Résolu");
+        serviceReclamation.update(reclamation);
+        System.out.println("Réclamation mise à jour : " + serviceReclamation.getById(reclamation.getId()));
+
+        // Supprimer un motif
+        serviceMotif.delete(motif2);
+        System.out.println("Motifs après suppression : " + serviceMotif.getAll());
+
+        // Supprimer une réclamation
+        serviceReclamation.delete(reclamation);
+        System.out.println("Réclamations après suppression : " + serviceReclamation.getAll());
+    }
+}

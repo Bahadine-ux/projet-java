@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom, #e8f1ff, #f5f8ff);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ModifierMotifReclamationController">
+    <children>
+        <!-- Main Form Container -->
+        <VBox alignment="CENTER" layoutX="100.0" layoutY="120.0" prefHeight="450.0" prefWidth="600.0" spacing="15.0" style="-fx-background-color: #ffffff; -fx-border-radius: 15; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 12, 0, 0, 4); -fx-padding: 30;">
+            <children>
+                <!-- Title -->
+                <Label style="-fx-text-fill: #1a3c6d;" text="Modifier un Motif de Réclamation">
+                    <font>
+                        <Font name="System Bold" size="26.0" />
+                    </font>
+                </Label>
+                <Label style="-fx-text-fill: #4a6a9b;" text="Modifiez les détails du motif">
+                    <font>
+                        <Font name="System Italic" size="14.0" />
+                    </font>
+                </Label>
+
+                <!-- Nom Field -->
+                <Label style="-fx-text-fill: #1a3c6d;" text="Nom du Motif *">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="nomField" promptText="Ex. 'Problème de Service'" style="-fx-background-color: #f8fafd; -fx-border-color: #b8c7e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 12; -fx-text-fill: #1a3c6d;">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                    <tooltip>
+                        <Tooltip text="Modifiez le nom du motif" />
+                    </tooltip>
+                </TextField>
+
+                <!-- Type Field -->
+                <Label style="-fx-text-fill: #1a3c6d;" text="Type de Motif *">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="typeField" promptText="Ex. 'Service Client'" style="-fx-background-color: #f8fafd; -fx-border-color: #b8c7e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 12; -fx-text-fill: #1a3c6d;">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                    <tooltip>
+                        <Tooltip text="Modifiez le type du motif de réclamation" />
+                    </tooltip>
+                </TextField>
+
+                <!-- Description Field -->
+                <Label style="-fx-text-fill: #1a3c6d;" text="Description *">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <TextArea fx:id="descriptionField" prefHeight="100.0" promptText="Ex. 'Problèmes liés au service client'" style="-fx-background-color: #f8fafd; -fx-border-color: #b8c7e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 12; -fx-text-fill: #1a3c6d;">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                    <tooltip>
+                        <Tooltip text="Modifiez la description du motif" />
+                    </tooltip>
+                </TextArea>
+
+                <!-- Buttons -->
+                <HBox alignment="CENTER" spacing="15.0">
+                    <children>
+                        <Button fx:id="saveButton" onAction="#saveChanges" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-background-radius: 10; -fx-padding: 14 40; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 6, 0, 0, 3);" text="Enregistrer">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Button>
+                        <Button onAction="#cancel" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-background-radius: 10; -fx-padding: 14 40; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 6, 0, 0, 3);" text="Annuler">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+
+                <!-- Message Label -->
+                <Label fx:id="messageLabel" text="" style="-fx-text-fill: red;"/>
+            </children>
+            <padding>
+                <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

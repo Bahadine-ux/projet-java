@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d0671891-1f94-4e2e-aec5-6426b04a94d8" name="Changes" comment="map basique">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/images/call.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/images/city_scene.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/images/contact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/images/doubleroom.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/images/facebook_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/images/google_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/images/lobbyHotel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/images/logo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/images/phone.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/images/singleroom.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/images/transport_logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/images/trash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/images/twinroom.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/AjouterMotifReclamationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/AjouterPersonneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/AjouterReclamationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/AjouterReponseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/Home.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ListMotifReclamationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ListReclamationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ListReponseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ModiferReclamationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ModifierMotifReclamationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ModifierReponseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/interfaces/IService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/models/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/models/MotifReclamation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/models/Reclamation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/models/Reponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/services/EmailSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/services/ServiceClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/services/ServiceMotifReclamation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/services/ServiceReclamation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/services/ServiceReponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/test/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/test/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/utils/MyDataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/AjouterMotifReclamation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/AjouterPersonne.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/AjouterReclamation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/AjouterReponse.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ListMotifReclamation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ListReclamation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ListReponse.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Login.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ModifierMotifReclamation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ModifierReclamation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ModifierReponse.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Reserver_vol_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Reservervol.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/add_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/admin-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/atravel_illustration.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/atravel_signup_illustration.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/call.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/city_scene.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/complaints_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/contact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/dashboard-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/delete_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/doubleroom.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/facebook_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/flights_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/forgot_password_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/google_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/hotels_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/lobbyHotel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/login-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/logo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/logout_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/news-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/phone.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/plan-trip-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/planifiervoy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/profile-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/publications_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/reservations-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/reset_password_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/singleroom.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/star_empty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/transport_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/transport_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/trash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/travel_signup_illustration.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/travellian_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/ttravel_illustration.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/twinroom.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/user-avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/users_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/admin-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/atravel_illustration.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/complaints_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/powerpoint-airplane-background-design-template-15acae1056f4ec5f2306e1b4804b1560_screen.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/publications_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/téléchargement.jpg" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Koussay-Akchi&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b40d55d5-928e-4feb-945c-9087b19744af" />
+        <option name="url" value="https://github.com/Koussay-Akchi/travillian.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/controllers/AjoutHotelController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/controllers/homeController.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2wcjQJJw03hQhg9HhYnYjVoh67Q" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Maven.Pidev3A49 [clean,install].executor": "Run",
+    "Maven.Pidev3A49 [javafx:run].executor": "Run",
+    "Maven.hoteldemo [clean,install].executor": "Run",
+    "Maven.hoteldemo [javafx:run].executor": "Run",
+    "Maven.hoteldemo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "<unknown>",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/user/IdeaProjects/hoteldemo/src/main/java",
+    "last_opened_file_path": "C:/Users/baha jouila/Desktop/Bahajava2/Bahajava2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/user/IdeaProjects/hoteldemo/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Koussay\Desktop\Tma7rith\projet\Bahajava2\src\main\resources" />
+      <recent name="C:\Users\Koussay\Desktop\Tma7rith\projet\hoteldemo\src\main\resources" />
+      <recent name="C:\Users\Koussay\Desktop\Tma7rith\projet\hoteldemo\src\main\resources\images" />
+      <recent name="C:\Users\user\IdeaProjects\hoteldemo\src\main" />
+      <recent name="C:\Users\user\IdeaProjects\hoteldemo\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Koussay\Desktop\Tma7rith\projet\hoteldemo\src\main\images" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="controllers" />
+      <recent name="tn.esprit.services" />
+      <recent name="tn.esprit.models" />
+      <recent name="services" />
+      <recent name="entities" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Pidev3A49 [javafx:run]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="javafx:run" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Maven.Pidev3A49 [javafx:run]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d0671891-1f94-4e2e-aec5-6426b04a94d8" name="Changes" comment="" />
+      <created>1746347739973</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746347739973</updated>
+      <workItem from="1746347741110" duration="7914000" />
+      <workItem from="1746368634570" duration="1739000" />
+      <workItem from="1746468023096" duration="3000" />
+      <workItem from="1746468032995" duration="576000" />
+      <workItem from="1746468932403" duration="10259000" />
+      <workItem from="1746540404712" duration="7461000" />
+      <workItem from="1746637797510" duration="1015000" />
+      <workItem from="1746638843310" duration="14052000" />
+      <workItem from="1746653813968" duration="519000" />
+      <workItem from="1746695045590" duration="253000" />
+      <workItem from="1746704159667" duration="1409000" />
+      <workItem from="1746882420835" duration="5106000" />
+      <workItem from="1746888513600" duration="3155000" />
+      <workItem from="1746891849864" duration="3642000" />
+      <workItem from="1746895568306" duration="692000" />
+      <workItem from="1747078917165" duration="299000" />
+    </task>
+    <task id="LOCAL-00001" summary="fix: images">
+      <option name="closed" value="true" />
+      <created>1746468970092</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746468970092</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: ajout hotel basique">
+      <option name="closed" value="true" />
+      <created>1746475097586</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746475097587</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: attributs hotel">
+      <option name="closed" value="true" />
+      <created>1746475838960</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746475838960</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: carousel hotels">
+      <option name="closed" value="true" />
+      <created>1746479042200</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746479042200</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix: css">
+      <option name="closed" value="true" />
+      <created>1746479478988</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746479478988</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: modifier hotel">
+      <option name="closed" value="true" />
+      <created>1746480075085</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1746480075085</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: image hotel">
+      <option name="closed" value="true" />
+      <created>1746482442015</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1746482442015</updated>
+    </task>
+    <task id="LOCAL-00008" summary="rounded images">
+      <option name="closed" value="true" />
+      <created>1746541220458</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1746541220458</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refresh hotels">
+      <option name="closed" value="true" />
+      <created>1746541723960</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1746541723960</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix: image edit">
+      <option name="closed" value="true" />
+      <created>1746543199165</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1746543199165</updated>
+    </task>
+    <task id="LOCAL-00011" summary="delete hotel + branding">
+      <option name="closed" value="true" />
+      <created>1746546833410</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1746546833410</updated>
+    </task>
+    <task id="LOCAL-00012" summary="note Hotels">
+      <option name="closed" value="true" />
+      <created>1746548017843</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1746548017843</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix AjoutHotelController">
+      <option name="closed" value="true" />
+      <created>1746548423131</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1746548423131</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fix integration">
+      <option name="closed" value="true" />
+      <created>1746641403638</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1746641403638</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix liste hotels">
+      <option name="closed" value="true" />
+      <created>1746642940830</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1746642940830</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix liste hotels 2">
+      <option name="closed" value="true" />
+      <created>1746643500308</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1746643500308</updated>
+    </task>
+    <task id="LOCAL-00017" summary="fix liste hotels 3">
+      <option name="closed" value="true" />
+      <created>1746644762657</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1746644762657</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix ajouter hotel button">
+      <option name="closed" value="true" />
+      <created>1746645011508</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1746645011508</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fix ajouter hotel button">
+      <option name="closed" value="true" />
+      <created>1746645890551</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1746645890551</updated>
+    </task>
+    <task id="LOCAL-00020" summary="feat reservation hotels">
+      <option name="closed" value="true" />
+      <created>1746650768903</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1746650768903</updated>
+    </task>
+    <task id="LOCAL-00021" summary="map basique">
+      <option name="closed" value="true" />
+      <created>1746652262382</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1746652262382</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="fix: images" />
+    <MESSAGE value="feat: ajout hotel basique" />
+    <MESSAGE value="feat: attributs hotel" />
+    <MESSAGE value="feat: carousel hotels" />
+    <MESSAGE value="fix: css" />
+    <MESSAGE value="feat: modifier hotel" />
+    <MESSAGE value="feat: image hotel" />
+    <MESSAGE value="rounded images" />
+    <MESSAGE value="refresh hotels" />
+    <MESSAGE value="fix: image edit" />
+    <MESSAGE value="delete hotel + branding" />
+    <MESSAGE value="note Hotels" />
+    <MESSAGE value="fix AjoutHotelController" />
+    <MESSAGE value="fix integration" />
+    <MESSAGE value="fix liste hotels" />
+    <MESSAGE value="fix liste hotels 2" />
+    <MESSAGE value="fix liste hotels 3" />
+    <MESSAGE value="fix ajouter hotel button" />
+    <MESSAGE value="feat reservation hotels" />
+    <MESSAGE value="map basique" />
+    <option name="LAST_COMMIT_MESSAGE" value="map basique" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

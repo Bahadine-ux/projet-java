@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to bottom right, #2b5876, #4e4376);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterMotifReclamationController">
+    <children>
+        <!-- Header with company logo or icon placeholder -->
+        <HBox alignment="CENTER_LEFT" layoutX="0.0" layoutY="0.0" prefHeight="80.0" prefWidth="1000.0" style="-fx-background-color: rgba(255,255,255,0.1); -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);">
+            <padding>
+                <Insets left="30.0" right="30.0" />
+            </padding>
+            <children>
+                <!-- Replace with your actual logo -->
+                <StackPane prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+                    <children>
+                        <Label text="CR" style="-fx-text-fill: #4e4376; -fx-font-weight: bold;">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </StackPane>
+                <Label style="-fx-text-fill: white;" text="Système de Gestion des Réclamations">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="15.0" />
+                    </HBox.margin>
+                </Label>
+            </children>
+        </HBox>
+
+        <!-- Main Form Container -->
+        <StackPane alignment="CENTER" layoutX="0.0" layoutY="120.0" prefHeight="540.0" prefWidth="1000.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
+            <children>
+                <VBox alignment="CENTER" maxWidth="700.0" prefHeight="500.0" prefWidth="700.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;">
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color opacity="0.25" />
+                            </color>
+                            <width>20</width>
+                            <height>20</height>
+                        </DropShadow>
+                    </effect>
+                    <children>
+                        <!-- Decorative header -->
+                        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#4e4376" height="12.0" stroke="TRANSPARENT" strokeType="INSIDE" width="700.0" />
+
+                        <!-- Title -->
+                        <Label style="-fx-text-fill: #4e4376;" text="Créer un Nouveau Motif de Réclamation">
+                            <font>
+                                <Font name="System Bold" size="28.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label style="-fx-text-fill: #757575;" text="Remplissez les détails pour ajouter un motif">
+                            <font>
+                                <Font name="System Italic" size="16.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="20.0" />
+                            </VBox.margin>
+                        </Label>
+
+                        <!-- Form Fields in a VBox -->
+                        <VBox spacing="15.0" style="-fx-padding: 0 40 0 40;" maxWidth="600.0" prefWidth="600.0">
+                            <!-- Nom Field -->
+                            <children>
+                                <HBox alignment="CENTER_LEFT">
+                                    <children>
+                                        <Label style="-fx-text-fill: #4e4376;" text="Nom">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label style="-fx-text-fill: #e74c3c;" text=" *">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <TextField fx:id="nomField" promptText="Ex. 'Service Client'" style="-fx-background-color: #f5f5f5; -fx-border-color: #e0e0e0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 12; -fx-text-fill: #333333; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0, 0, 1);">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                    <tooltip>
+                                        <Tooltip text="Entrez le nom du motif" />
+                                    </tooltip>
+                                </TextField>
+
+                                <!-- Description Field -->
+                                <HBox alignment="CENTER_LEFT">
+                                    <children>
+                                        <Label style="-fx-text-fill: #4e4376;" text="Description">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label style="-fx-text-fill: #e74c3c;" text=" *">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <TextField fx:id="descriptionField" promptText="Ex. 'Problème lié au service client'" style="-fx-background-color: #f5f5f5; -fx-border-color: #e0e0e0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 12; -fx-text-fill: #333333; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0, 0, 1);">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                    <tooltip>
+                                        <Tooltip text="Décrivez le motif" />
+                                    </tooltip>
+                                </TextField>
+
+                                <!-- Type Field -->
+                                <HBox alignment="CENTER_LEFT">
+                                    <children>
+                                        <Label style="-fx-text-fill: #4e4376;" text="Type">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label style="-fx-text-fill: #e74c3c;" text=" *">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <TextField fx:id="typeField" promptText="Ex. 1" style="-fx-background-color: #f5f5f5; -fx-border-color: #e0e0e0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 12; -fx-text-fill: #333333; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0, 0, 1);">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                    <tooltip>
+                                        <Tooltip text="Entrez le type (nombre entier)" />
+                                    </tooltip>
+                                </TextField>
+                            </children>
+                        </VBox>
+
+                        <!-- Message Label -->
+                        <Label fx:id="messageLabel" text="" style="-fx-text-fill: #e74c3c; -fx-font-size: 14;">
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </Label>
+
+                        <!-- Action Buttons -->
+                        <HBox alignment="CENTER" spacing="20.0">
+                            <children>
+                                <Button fx:id="submitButton" onAction="#ajouterMotif" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #4e4376; -fx-text-fill: white; -fx-background-radius: 25; -fx-padding: 14 30; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0, 0, 3);" text="Créer le Motif">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                    <graphic>
+                                        <!-- You can add an icon here or use Unicode character -->
+                                        <Label style="-fx-text-fill: white;" text="✓">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                    </graphic>
+                                </Button>
+                                <Button onAction="#annuler" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #f8f9fa; -fx-text-fill: #6c757d; -fx-border-color: #6c757d; -fx-border-radius: 25; -fx-background-radius: 25; -fx-padding: 14 30;" text="Annuler">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="20.0" top="20.0" />
+                            </VBox.margin>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </StackPane>
+
+        <!-- Footer -->
+        <HBox alignment="CENTER" layoutX="0.0" layoutY="660.0" prefHeight="40.0" prefWidth="1000.0" style="-fx-background-color: rgba(0,0,0,0.3);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <Label style="-fx-text-fill: rgba(255,255,255,0.8);" text="© 2025 Système de Gestion des Réclamations">
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

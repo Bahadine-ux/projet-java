@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom right, #3c6382, #60a3bc);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterReclamationController">
+    <children>
+        <!-- Header avec logo et titre -->
+        <HBox alignment="CENTER_LEFT" layoutX="0.0" layoutY="0.0" prefHeight="80.0" prefWidth="900.0" style="-fx-background-color: rgba(255, 255, 255, 0.9); -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0, 0, 2);">
+            <padding>
+                <Insets left="30.0" right="30.0" />
+            </padding>
+            <children>
+                <!-- Emplacement pour un logo -->
+                <StackPane prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #3c6382; -fx-background-radius: 8;">
+                    <children>
+                        <Label text="R" style="-fx-text-fill: white; -fx-font-weight: bold;">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </StackPane>
+                <Label style="-fx-text-fill: #2c3e50;" text="  Gestion des Réclamations">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+
+        <!-- Conteneur principal -->
+        <VBox alignment="TOP_CENTER" layoutX="75.0" layoutY="100.0" prefHeight="580.0" prefWidth="750.0" style="-fx-background-color: white; -fx-border-radius: 20; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 15, 0, 0, 5);">
+            <children>
+                <!-- En-tête du formulaire -->
+                <VBox alignment="CENTER" prefHeight="100.0" style="-fx-background-color: #f5f9ff; -fx-background-radius: 20 20 0 0;">
+                    <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                    </padding>
+                    <children>
+                        <Label style="-fx-text-fill: #2c3e50;" text="Créer une Nouvelle Réclamation">
+                            <font>
+                                <Font name="System Bold" size="28.0" />
+                            </font>
+                        </Label>
+                        <Label style="-fx-text-fill: #7f8c8d;" text="Remplissez les informations requises pour traiter votre demande">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+
+                <!-- Formulaire -->
+                <VBox spacing="18.0" style="-fx-padding: 30 50 30 50;">
+                    <children>
+                        <!-- Contenu de la réclamation -->
+                        <VBox spacing="8.0">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" spacing="5.0">
+                                    <children>
+                                        <Label style="-fx-text-fill: #2c3e50;" text="Contenu de la Réclamation">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label style="-fx-text-fill: #e74c3c;" text="*" />
+                                    </children>
+                                </HBox>
+                                <TextArea fx:id="contenuField" prefHeight="120.0" promptText="Décrivez votre réclamation en détail..." style="-fx-background-color: #f8fafd; -fx-border-color: #dfe6e9; -fx-border-radius: 12; -fx-background-radius: 12; -fx-padding: 12; -fx-text-fill: #2c3e50; -fx-border-width: 1.5;">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                    <tooltip>
+                                        <Tooltip text="Décrivez précisément le motif de votre réclamation" />
+                                    </tooltip>
+                                </TextArea>
+                            </children>
+                        </VBox>
+
+                        <!-- Layout pour Statut et Motif -->
+                        <HBox spacing="20.0">
+                            <children>
+                                <!-- Statut -->
+                                <VBox spacing="8.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <HBox alignment="CENTER_LEFT" spacing="5.0">
+                                            <children>
+                                                <Label style="-fx-text-fill: #2c3e50;" text="Statut">
+                                                    <font>
+                                                        <Font name="System Bold" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label style="-fx-text-fill: #e74c3c;" text="*" />
+                                            </children>
+                                        </HBox>
+                                        <ComboBox fx:id="statusComboBox" maxWidth="Infinity" promptText="Sélectionnez un statut" style="-fx-background-color: #f8fafd; -fx-border-color: #dfe6e9; -fx-border-radius: 12; -fx-background-radius: 12; -fx-padding: 8; -fx-border-width: 1.5;">
+                                            <tooltip>
+                                                <Tooltip text="Choisissez le statut actuel de votre réclamation" />
+                                            </tooltip>
+                                        </ComboBox>
+                                    </children>
+                                </VBox>
+
+                                <!-- Motif -->
+                                <VBox spacing="8.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <HBox alignment="CENTER_LEFT" spacing="5.0">
+                                            <children>
+                                                <Label style="-fx-text-fill: #2c3e50;" text="Motif de la Réclamation">
+                                                    <font>
+                                                        <Font name="System Bold" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label style="-fx-text-fill: #e74c3c;" text="*" />
+                                            </children>
+                                        </HBox>
+                                        <ComboBox fx:id="motifComboBox" maxWidth="Infinity" promptText="Sélectionnez un motif" style="-fx-background-color: #f8fafd; -fx-border-color: #dfe6e9; -fx-border-radius: 12; -fx-background-radius: 12; -fx-padding: 8; -fx-border-width: 1.5;">
+                                            <tooltip>
+                                                <Tooltip text="Choisissez la catégorie de votre réclamation" />
+                                            </tooltip>
+                                        </ComboBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+
+                        <!-- Date -->
+                        <VBox spacing="8.0">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" spacing="5.0">
+                                    <children>
+                                        <Label style="-fx-text-fill: #2c3e50;" text="Date de la Réclamation">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label style="-fx-text-fill: #e74c3c;" text="*" />
+                                    </children>
+                                </HBox>
+                                <DatePicker fx:id="datePicker" maxWidth="Infinity" promptText="JJ/MM/AAAA" style="-fx-background-color: #f8fafd; -fx-border-color: #dfe6e9; -fx-border-radius: 12; -fx-background-radius: 12; -fx-padding: 8; -fx-border-width: 1.5;">
+                                    <tooltip>
+                                        <Tooltip text="Indiquez la date de l'incident" />
+                                    </tooltip>
+                                </DatePicker>
+                            </children>
+                        </VBox>
+
+                        <!-- Note d'information -->
+                        <HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-background-color: #f0f7ff; -fx-background-radius: 12; -fx-padding: 12;">
+                            <children>
+                                <StackPane prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #3498db; -fx-background-radius: 15;">
+                                    <children>
+                                        <Label text="i" style="-fx-text-fill: white; -fx-font-weight: bold;">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </StackPane>
+                                <Label style="-fx-text-fill: #34495e;" text="Votre réclamation sera traitée dans un délai de 48 heures ouvrables." wrapText="true">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+
+                        <!-- Message d'erreur -->
+                        <Label fx:id="messageLabel" style="-fx-text-fill: #e74c3c; -fx-font-weight: bold;" text="" />
+
+                        <!-- Boutons d'action -->
+                        <HBox alignment="CENTER" spacing="20.0" style="-fx-padding: 20 0 10 0;">
+                            <children>
+                                <Button fx:id="submitButton" onAction="#ajouterReclamation" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-background-radius: 12; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0, 0, 2);" text="Créer la Réclamation">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                    <graphic>
+                                        <Rectangle fill="WHITE" height="18.0" width="18.0" />
+                                        <!-- À remplacer par une icône ou une image appropriée -->
+                                    </graphic>
+                                </Button>
+                                <Button onAction="#annuler" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-text-fill: #e74c3c; -fx-border-color: #e74c3c; -fx-border-width: 2; -fx-border-radius: 12; -fx-background-radius: 12;" text="Annuler">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+
+        <!-- Pied de page -->
+        <HBox alignment="CENTER" layoutY="685.0" prefHeight="15.0" prefWidth="900.0">
+            <children>
+                <Label style="-fx-text-fill: white;" text="© 2025 - Système de Gestion des Réclamations">
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

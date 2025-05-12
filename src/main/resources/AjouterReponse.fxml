@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.layout.Region?>
+
+<AnchorPane prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterReponseController">
+    <children>
+        <!-- Background with Gradient -->
+        <Rectangle width="850.0" height="650.0" arcWidth="0.0" arcHeight="0.0">
+            <fill>
+                <LinearGradient startX="0.0" startY="0.0" endX="0.0" endY="1.0">
+                    <stops>
+                        <Stop color="#1a3c6d" offset="0.0" />
+                        <Stop color="#2c5eaa" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+
+        <!-- Decorative Elements -->
+        <Rectangle fill="#ffffff11" width="250.0" height="250.0" x="650.0" y="-50.0" rotate="45" />
+        <Rectangle fill="#ffffff11" width="180.0" height="180.0" x="-50.0" y="500.0" rotate="30" />
+
+        <!-- Header Area -->
+        <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="40.0" prefWidth="750.0">
+            <children>
+                <VBox>
+                    <Label text="Système de Gestion" style="-fx-text-fill: #f0f8ff; -fx-font-weight: light;">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Label>
+                    <Label text="Réponses aux Réclamations" style="-fx-text-fill: white; -fx-font-weight: bold;">
+                        <font>
+                            <Font size="24.0" />
+                        </font>
+                    </Label>
+                </VBox>
+            </children>
+        </HBox>
+
+        <!-- Main Form Container -->
+        <VBox alignment="TOP_CENTER" layoutX="120.0" layoutY="120.0" prefWidth="610.0" prefHeight="450.0"
+              style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 15, 0, 0, 5);">
+            <padding>
+                <Insets top="35.0" right="40.0" bottom="35.0" left="40.0" />
+            </padding>
+
+            <!-- Title with Accent Line -->
+            <VBox alignment="CENTER" spacing="8.0">
+                <Label style="-fx-text-fill: #1a3c6d;" text="Ajouter une Réponse">
+                    <font>
+                        <Font name="System Bold" size="28.0" />
+                    </font>
+                </Label>
+                <Rectangle height="3.0" width="80.0" fill="#2c5eaa" />
+                <Label style="-fx-text-fill: #7889a9;" text="Remplissez les détails de la réponse">
+                    <font>
+                        <Font name="System Italic" size="14.0" />
+                    </font>
+                </Label>
+            </VBox>
+
+            <Region prefHeight="20.0" />
+
+            <!-- Reclamation Field -->
+            <VBox spacing="8.0">
+                <HBox alignment="CENTER_LEFT" spacing="5.0">
+                    <Label style="-fx-text-fill: #2c5eaa; -fx-font-weight: bold;" text="Réclamation">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label style="-fx-text-fill: #e74c3c;" text="*" />
+                </HBox>
+                <ComboBox fx:id="reclamationComboBox" prefHeight="45.0" prefWidth="530.0" promptText="Sélectionnez une réclamation"
+                          style="-fx-background-color: #f8fafd; -fx-border-color: #d0dbe9; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-size: 14px;">
+                    <tooltip>
+                        <Tooltip text="Choisissez la réclamation à laquelle vous souhaitez répondre" />
+                    </tooltip>
+                </ComboBox>
+            </VBox>
+
+            <Region prefHeight="15.0" />
+
+            <!-- Reponse Field -->
+            <VBox spacing="8.0">
+                <HBox alignment="CENTER_LEFT" spacing="5.0">
+                    <Label style="-fx-text-fill: #2c5eaa; -fx-font-weight: bold;" text="Réponse">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label style="-fx-text-fill: #e74c3c;" text="*" />
+                </HBox>
+                <TextArea fx:id="reponseField" prefHeight="140.0" prefWidth="530.0"
+                          promptText="Ex. 'Nous avons bien reçu votre réclamation et nous vous confirmons sa prise en charge...'"
+                          style="-fx-background-color: #f8fafd; -fx-border-color: #d0dbe9; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 10; -fx-font-size: 14px;">
+                    <tooltip>
+                        <Tooltip text="Saisissez votre réponse détaillée à la réclamation sélectionnée" />
+                    </tooltip>
+                </TextArea>
+            </VBox>
+
+            <Region prefHeight="15.0" />
+
+            <!-- Date Field -->
+            <VBox spacing="8.0">
+                <HBox alignment="CENTER_LEFT" spacing="5.0">
+                    <Label style="-fx-text-fill: #2c5eaa; -fx-font-weight: bold;" text="Date">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label style="-fx-text-fill: #e74c3c;" text="*" />
+                </HBox>
+                <DatePicker fx:id="datePicker" prefHeight="45.0" prefWidth="530.0" promptText="Sélectionnez une date"
+                            style="-fx-background-color: #f8fafd; -fx-border-color: #d0dbe9; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-size: 14px;">
+                    <tooltip>
+                        <Tooltip text="Choisissez la date de la réponse" />
+                    </tooltip>
+                </DatePicker>
+            </VBox>
+
+            <Region prefHeight="15.0" />
+
+            <!-- Statut Field -->
+            <VBox spacing="8.0">
+                <HBox alignment="CENTER_LEFT" spacing="5.0">
+                    <Label style="-fx-text-fill: #2c5eaa; -fx-font-weight: bold;" text="Statut">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <Label style="-fx-text-fill: #e74c3c;" text="*" />
+                </HBox>
+                <ComboBox fx:id="statutComboBox" prefHeight="45.0" prefWidth="530.0" promptText="Sélectionnez un statut"
+                          style="-fx-background-color: #f8fafd; -fx-border-color: #d0dbe9; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-size: 14px;">
+                    <tooltip>
+                        <Tooltip text="Choisissez le statut de la réponse" />
+                    </tooltip>
+                </ComboBox>
+            </VBox>
+
+            <Region prefHeight="20.0" />
+
+            <!-- Message Label -->
+            <Label fx:id="messageLabel" text="" style="-fx-text-fill: #e74c3c; -fx-font-size: 13px; -fx-font-style: italic;"/>
+
+            <Region prefHeight="15.0" />
+
+            <!-- Action Buttons -->
+            <HBox alignment="CENTER" spacing="20.0">
+                <Button fx:id="saveButton" onAction="#ajouterReponse" prefWidth="170.0" prefHeight="45.0"
+                        style="-fx-background-color: linear-gradient(to right, #2c5eaa, #1a3c6d); -fx-text-fill: white; -fx-background-radius: 22; -fx-effect: dropshadow(gaussian, rgba(44,94,170,0.4), 8, 0, 0, 3);"
+                        text="Enregistrer">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button onAction="#cancel" prefWidth="170.0" prefHeight="45.0"
+                        style="-fx-background-color: white; -fx-text-fill: #e74c3c; -fx-border-color: #e74c3c; -fx-border-radius: 22; -fx-background-radius: 22;"
+                        text="Annuler">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+            </HBox>
+        </VBox>
+
+        <!-- Footer Text -->
+        <Label layoutX="325.0" layoutY="600.0" style="-fx-text-fill: #b8c7e0;" text="© 2025 Système de Gestion">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

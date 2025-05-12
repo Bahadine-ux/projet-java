@@ -1,0 +1,108 @@
+package controllers;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
+import tn.esprit.models.Reclamation;
+import tn.esprit.models.Reponse;
+import tn.esprit.services.ServiceReclamation;
+import tn.esprit.services.ServiceReponse;
+
+import java.util.List;
+
+public class ModifierReponseController {
+
+    @FXML
+    private ComboBox<String> reclamationComboBox;
+
+    @FXML
+    private TextArea reponseField;
+
+    @FXML
+    private Label messageLabel;
+
+    private Reponse reponseToModify;
+    private ServiceReponse serviceReponse;
+    private ServiceReclamation serviceReclamation;
+    private List<Reclamation> reclamations;
+
+    public void setReponse(Reponse reponse) {
+        this.reponseToModify = reponse;
+        this.serviceReponse = new ServiceReponse();
+        this.serviceReclamation = new ServiceReclamation();
+        loadReclamations();
+        loadReponseData();
+    }
+
+    private void loadReclamations() {
+        reclamations = serviceReclamation.getAll();
+        for (Reclamation reclamation : reclamations) {
+            reclamationComboBox.getItems().add("Réclamation #" + reclamation.getId());
+        }
+    }
+
+    private void loadReponseData() {
+        if (reponseToModify != null) {
+            reclamationComboBox.setValue("Réclamation #" + reponseToModify.getReclamation().getId());
+            reponseField.setText(reponseToModify.getReponse());
+        }
+    }
+
+    @FXML
+    private void saveChanges() {
+        if (reponseToModify == null) {
+            messageLabel.setText("Aucune réponse sélectionnée !");
+            messageLabel.setStyle("-fx-text-fill: red;");
+            return;
+        }
+
+        String selectedReclamation = reclamationComboBox.getValue();
+        String reponseText = reponseField.getText();
+
+        if (selectedReclamation == null || reponseText.isEmpty()) {
+            messageLabel.setText("Tous les champs sont obligatoires !");
+            messageLabel.setStyle("-fx-text-fill: red;");
+            return;
+        }
+
+        // Extract reclamation ID from the selected string (format: "Réclamation #ID")
+        int reclamationId = Integer.parseInt(selectedReclamation.split("#")[1]);
+        Reclamation reclamation = reclamations.stream()
+                .filter(r -> r.getId() == reclamationId)
+                .findFirst()
+                .orElse(null);
+
+        if (reclamation == null) {
+            messageLabel.setText("Réclamation non trouvée !");
+            messageLabel.setStyle("-fx-text-fill: red;");
+            return;
+        }
+
+        reponseToModify.setReclamation(reclamation);
+        reponseToModify.setReponse(reponseText);
+
+        try {
+            serviceReponse.update(reponseToModify);
+            messageLabel.setText("Réponse modifiée avec succès !");
+            messageLabel.setStyle("-fx-text-fill: green;");
+            clearFieldsAndClose();
+        } catch (Exception e) {
+            messageLabel.setText("Erreur lors de la modification : " + e.getMessage());
+            messageLabel.setStyle("-fx-text-fill: red;");
+        }
+    }
+
+    @FXML
+    private void cancel() {
+        clearFieldsAndClose();
+    }
+
+    private void clearFieldsAndClose() {
+        reclamationComboBox.getSelectionModel().clearSelection();
+        reponseField.clear();
+        Stage stage = (Stage) reponseField.getScene().getWindow();
+        stage.close();
+    }
+}

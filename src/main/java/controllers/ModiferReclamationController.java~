@@ -1,0 +1,98 @@
+package controllers;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import tn.esprit.models.MotifReclamation;
+import tn.esprit.models.Reclamation;
+import tn.esprit.services.ServiceMotifReclamation;
+import tn.esprit.services.ServiceReclamation;
+
+import java.util.List;
+
+public class ModiferReclamationController {
+
+    @FXML
+    private TextArea contenuField;
+
+    @FXML
+    private TextField statusField;
+
+    @FXML
+    private ComboBox<String> motifComboBox;
+
+    @FXML
+    private Label messageLabel;
+
+    private Reclamation reclamationToModify;
+    private final ServiceReclamation serviceReclamation = new ServiceReclamation();
+    private final ServiceMotifReclamation serviceMotif = new ServiceMotifReclamation();
+
+    public void setReclamation(Reclamation reclamation) {
+        this.reclamationToModify = reclamation;
+        loadMotifs();
+        loadReclamationData();
+    }
+
+    private void loadMotifs() {
+        motifComboBox.getItems().clear();
+        List<MotifReclamation> motifs = serviceMotif.getAll();
+        for (MotifReclamation motif : motifs) {
+            motifComboBox.getItems().add(motif.getType());
+        }
+    }
+
+    private void loadReclamationData() {
+        if (reclamationToModify != null) {
+            contenuField.setText(reclamationToModify.getContenu());
+            statusField.setText(reclamationToModify.getStatus());
+            motifComboBox.setValue(reclamationToModify.getType());
+        }
+    }
+
+    @FXML
+    private void saveChanges() {
+        if (reclamationToModify == null) {
+            messageLabel.setText("Aucune réclamation sélectionnée !");
+            messageLabel.setStyle("-fx-text-fill: red;");
+            return;
+        }
+
+        String contenu = contenuField.getText();
+        String status = statusField.getText();
+        String type = motifComboBox.getValue();
+
+        if (contenu.isEmpty() || status.isEmpty() || type == null) {
+            messageLabel.setText("Tous les champs sont obligatoires !");
+            messageLabel.setStyle("-fx-text-fill: red;");
+            return;
+        }
+
+        reclamationToModify.setContenu(contenu);
+        reclamationToModify.setStatus(status);
+        reclamationToModify.setType(type);
+
+        try {
+            serviceReclamation.update(reclamationToModify);
+            messageLabel.setText("Réclamation modifiée avec succès !");
+            messageLabel.setStyle("-fx-text-fill: green;");
+            closeWindow();
+        } catch (Exception e) {
+            messageLabel.setText("Erreur : " + e.getMessage());
+            messageLabel.setStyle("-fx-text-fill: red;");
+        }
+    }
+
+    @FXML
+    private void cancel() {
+        closeWindow();
+    }
+
+    private void closeWindow() {
+        Stage stage = (Stage) contenuField.getScene().getWindow();
+        stage.close();
+    }
+}
